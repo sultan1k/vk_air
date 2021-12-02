@@ -7,9 +7,7 @@ packages = [
     'vk_air.objects'
 ]
 
-requirements = []
-with open('requirements.txt') as f:
-  requirements = f.read().splitlines()
+requirements = ['aiohttp>=3.6.0,<3.8.1', 'cryptography>=36.0.0']
 
 setuptools.setup(
     name='vk_air',
