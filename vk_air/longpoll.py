@@ -119,7 +119,7 @@ class LongPoll:
                 command = text[0]
                 if command in self.commands:
                     func = self.commands[command]['function']
-                    if func.__code__.co_argcount == 0:
+                    if func.__code__.co_argcount == 1:
                         loop.create_task(func(cls))
                     else:
                         args = text[1:][0].split()
