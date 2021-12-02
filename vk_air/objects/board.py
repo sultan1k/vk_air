@@ -23,7 +23,6 @@ SOFTWARE.
 """
 from typing import List, Optional
 
-from vk_air.bot_api import BotApi
 
 
 class Board:
@@ -32,7 +31,7 @@ class Board:
     """
     def __init__(self, obj, api=None):
         self.obj = obj
-        self.api: BotApi = api
+        self.api = api
     
     @property
     def id(self) -> int:
@@ -92,7 +91,7 @@ class BoardComment:
     """
     def __init__(self, obj, api = None):
         self.obj = obj
-        self.api: BotApi = api
+        self.api = api
     
     @property
     def id(self) -> int:
@@ -145,7 +144,7 @@ class DeletedBoardComment:
     """
     def __init__(self, obj, api=None):
         self.obj = obj
-        self.api: BotApi = api
+        self.api = api
     
     @property
     def id(self) -> int:
