@@ -22,11 +22,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 from typing import Optional, List
-
-from ..bot_api import BotApi
-from ..keyboard import Keyboard
-from ..objects.message import DeliveredMessage, Message
-from ..template import Template
 from .group import Group
 from .user import User
 
