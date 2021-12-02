@@ -30,5 +30,5 @@ class Utils:
     def mention_to_id(self, mention) -> int:
         return int(re.findall(r'\[id(\d*)\|.*]', mention)[0])
 
-    def mention_to_id(self, id) -> str:
+    def id_to_mention(self, id) -> str:
         return f'[id{id}|id{id}]'
