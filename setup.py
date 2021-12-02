@@ -1,6 +1,6 @@
 import setuptools
 
-VERSION = '0.5.1'
+VERSION = '0.5.2'
 
 packages = [
     'vk_air',
@@ -14,6 +14,7 @@ with open('requirements.txt') as f:
 setuptools.setup(
     name='vk_air',
     author='sultan1k',
+    description='Фреймворк на Python для VK API',
     version=VERSION,
     packages=packages,
     url='https://github.com/sultan1k/vk_air',
