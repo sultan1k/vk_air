@@ -198,8 +198,6 @@ class Message:
         self,
         text: str = None,
         *,
-        peer_id: int = None,
-        peer_ids: List[int] = None,
         lat: int = None,
         long: int = None,
         attachment: str = None,
@@ -217,8 +215,7 @@ class Message:
     ) -> int | List[DeliveredMessage]:
         r = await self.api.messagesSend(
             text=text,
-            peer_id=peer_id,
-            peer_ids=peer_ids,
+            peer_id=self.peer_id,
             lat=lat,
             long=long,
             attachment=attachment,
