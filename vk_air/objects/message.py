@@ -24,9 +24,6 @@ SOFTWARE.
 from __future__ import annotations
 from typing import List, Optional
 import json
-from ..bot_api import BotApi
-from ..keyboard import Keyboard
-from ..template import Template
 from .geo import Geo
 
 class MessageAction:
@@ -62,7 +59,7 @@ class Message:
     """
     def __init__(self, obj, api=None):
         self.obj = obj
-        self.api: BotApi = api
+        self.api = api
     
     @property
     def id(self) -> int:
@@ -209,8 +206,8 @@ class Message:
         reply_to: int = None,
         forward_messages: int = None,
         sticker_id: int = None,
-        keyboard: Keyboard = None,
-        template: Template = None,
+        keyboard = None,
+        template = None,
         payload: dict | str = None,
         content_source: dict = None,
         dont_parse_links: int = None,
@@ -246,8 +243,8 @@ class Message:
         lat: int = None,
         long: int = None,
         attachment: str = None,
-        keyboard: Keyboard = None,
-        template: Template = None,
+        keyboard = None,
+        template = None,
         dont_parse_links: int = None,
         disable_mentions: int = None,
         keep_forward_messages: int = 1,
@@ -315,7 +312,7 @@ class MessageEvent:
     """
     def __init__(self, obj, api):
         self.obj = obj
-        self.api: BotApi = api
+        self.api = api
     
     @property
     def user_id(self) -> int:
