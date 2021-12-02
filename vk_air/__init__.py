@@ -28,3 +28,4 @@ from .keyboard import *
 from .longpoll import *
 from .template import *
 from .utils import *
+from .attachment import *
