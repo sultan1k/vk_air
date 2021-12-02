@@ -6,6 +6,10 @@
 
 Фреймворк устанавливается с помощью команды
 ```
+pip install vk_air
+```
+или
+```
 pip install git+https://github.com/sultan1k/vk_air
 ```
 
