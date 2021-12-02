@@ -24,7 +24,7 @@ SOFTWARE.
 from __future__ import annotations
 from typing import List, Optional
 
-from vk_air.bot_api import BotApi
+from ..bot_api import BotApi
 from .geo import Geo
 from .donut import DonutWall
 

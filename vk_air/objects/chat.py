@@ -23,10 +23,10 @@ SOFTWARE.
 """
 from typing import Optional, List
 
-from vk_air.bot_api import BotApi
-from vk_air.keyboard import Keyboard
-from vk_air.objects.message import DeliveredMessage, Message
-from vk_air.template import Template
+from ..bot_api import BotApi
+from ..keyboard import Keyboard
+from ..objects.message import DeliveredMessage, Message
+from ..template import Template
 from .group import Group
 from .user import User
 

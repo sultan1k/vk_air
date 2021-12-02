@@ -24,10 +24,9 @@ SOFTWARE.
 from __future__ import annotations
 from typing import List, Optional
 import json
-from vk_air.bot_api import BotApi
-
-from vk_air.keyboard import Keyboard
-from vk_air.template import Template
+from ..bot_api import BotApi
+from ..keyboard import Keyboard
+from ..template import Template
 from .geo import Geo
 
 class MessageAction:

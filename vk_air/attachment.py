@@ -22,8 +22,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 from io import TextIOWrapper
-from vk_air.objects.message import UploadedMessagePhoto
-from vk_air.objects.server import MessagesUploadServer
+from .objects.message import UploadedMessagePhoto
+from .objects.server import MessagesUploadServer
 from .bot_api import BotApi
 import os
 import asyncio
