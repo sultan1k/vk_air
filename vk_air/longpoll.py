@@ -119,18 +119,21 @@ class LongPoll:
                 command = text[0]
                 if command in self.commands:
                     func = self.commands[command]['function']
-                    args = text[1:][0].split()
-                    kwargs = {}
-                    loop = asyncio.get_event_loop()
-                    names = func.__code__.co_varnames
-                    if func.__code__.co_kwonlyargcount == 0:
-                        loop.create_task(func(cls, *args))
+                    if func.__code__.co_argcount == 0:
+                        loop.create_task(func(cls))
                     else:
-                        ln = args[func.__code__.co_argcount-func.__code__.co_kwonlyargcount:]
-                        _kw = ' '.join(ln)
-                        args = args[:-(len(ln))]
-                        kwargs[names[(func.__code__.co_argcount+func.__code__.co_kwonlyargcount)-1]] = _kw
-                        loop.create_task(func(cls, *args, **kwargs))
+                        args = text[1:][0].split()
+                        kwargs = {}
+                        loop = asyncio.get_event_loop()
+                        names = func.__code__.co_varnames
+                        if func.__code__.co_kwonlyargcount == 0:
+                            loop.create_task(func(cls, *args))
+                        else:
+                            ln = args[func.__code__.co_argcount-func.__code__.co_kwonlyargcount:]
+                            _kw = ' '.join(ln)
+                            args = args[:-(len(ln))]
+                            kwargs[names[(func.__code__.co_argcount+func.__code__.co_kwonlyargcount)-1]] = _kw
+                            loop.create_task(func(cls, *args, **kwargs))
 
     async def load(self, update):
         if update['type'] == 'message_new':
