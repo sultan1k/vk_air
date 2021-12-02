@@ -23,8 +23,6 @@ SOFTWARE.
 """
 from __future__ import annotations
 from typing import List, Optional
-
-from ..bot_api import BotApi
 from .geo import Geo
 from .donut import DonutWall
 
@@ -129,7 +127,7 @@ class Wall:
     """
     def __init__(self, obj, api=None):
         self.obj = obj
-        self.api: BotApi = api
+        self.api = api
     
     @property
     def id(self) -> int:
