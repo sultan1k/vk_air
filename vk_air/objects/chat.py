@@ -31,7 +31,7 @@ class Chat:
     """
     def __init__(self, obj, api=None):
         self.obj = obj
-        self.api: BotApi = api
+        self.api = api
     
     @property
     def id(self) -> int:
@@ -93,7 +93,7 @@ class Chat:
         r = await self.api.messagesUnpin(peer_id=self.id)
         return True if r == 1 else False
 
-    async def pin_message(self, message_id: int) -> Optional[Message]:
+    async def pin_message(self, message_id: int):
         r = await self.api.messagesPin(peer_id=self.id, message_id=message_id)
         return r
 
@@ -109,15 +109,15 @@ class Chat:
         reply_to: int = None,
         forward_messages: int = None,
         sticker_id: int = None,
-        keyboard: Keyboard = None,
-        template: Template = None,
+        keyboard = None,
+        template = None,
         payload: dict | str = None,
         content_source: dict = None,
         dont_parse_links: int = None,
         disable_mentions: int = None,
         intent: str = None,
         subscribe_id: int = None
-    ) -> int | List[DeliveredMessage]:
+    ):
         r = await self.api.messagesSend(
             text=text,
             peer_id=peer_id,
@@ -148,13 +148,13 @@ class Chat:
         lat: int = None,
         long: int = None,
         attachment: str = None,
-        keyboard: Keyboard = None,
-        template: Template = None,
+        keyboard = None,
+        template = None,
         dont_parse_links: int = None,
         disable_mentions: int = None,
         keep_forward_messages: int = 1,
         keep_snippets: int = 1
-    ) -> int | List[DeliveredMessage]:
+    ):
         r = await self.api.messagesEdit(
             text=text,
             peer_id=peer_id,
