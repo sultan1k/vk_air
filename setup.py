@@ -1,6 +1,6 @@
 import setuptools
 
-VERSION = '0.5.15'
+VERSION = '0.5.16'
 
 packages = [
     'vk_air',
@@ -9,7 +9,7 @@ packages = [
 
 requirements = ['aiohttp>=3.6.0,<3.8.1', 'cryptography>=36.0.0']
 
-with open('README.md', 'r') as r:
+with open('README.rst', 'r') as r:
     desc = r.read()
 
 setuptools.setup(
