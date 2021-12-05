@@ -1,6 +1,6 @@
 import setuptools
 
-VERSION = '0.5.14'
+VERSION = '0.5.15'
 
 packages = [
     'vk_air',
@@ -9,10 +9,14 @@ packages = [
 
 requirements = ['aiohttp>=3.6.0,<3.8.1', 'cryptography>=36.0.0']
 
+with open('README.md', 'r') as r:
+    desc = r.read()
+
 setuptools.setup(
     name='vk_air',
     author='sultan1k',
     description='Фреймворк на Python для VK API',
+    long_description=desc,
     version=VERSION,
     packages=packages,
     url='https://github.com/sultan1k/vk_air',
