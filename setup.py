@@ -1,6 +1,6 @@
 import setuptools
 
-VERSION = '0.5.13'
+VERSION = '0.5.14'
 
 packages = [
     'vk_air',

@@ -163,6 +163,10 @@ class Message:
     @property
     def message_tag(self) -> Optional[str]:
         return self.obj.get('message_tag')
+
+    @property
+    def mention(self) -> str:
+        return f'[id{self.from_id}|@id{self.from_id}]'
     
     # ниже только для бесед
 
