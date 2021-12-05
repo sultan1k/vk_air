@@ -27,7 +27,7 @@ async def hi(ctx):
  
 @bot.event(name='chat_invite_user')
 async def add_me(ctx):
-  if ctx.action.member_id == bot.group.id:
+  if ctx.action.member_id == -bot.group.id:
     await ctx.send('Вы добавили меня в беседу!')
     
 @bot.command(name='whois')
